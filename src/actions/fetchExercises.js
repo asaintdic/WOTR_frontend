@@ -1,8 +1,16 @@
+import Exercises from "../components/Exercises"
 
 
-export function fetchExercises(action) {
-    return action
-    // fetch('http://localhost:3000/exercises')
-    // .then(res => res.json())
-    // .then(data => console.log(data))
+export function fetchExercises() {
+   return (dispatch) => {
+    fetch('http://localhost:3000/exercises')
+    .then(res => res.json())
+    .then(exercises => dispatch({
+        type: 'FETCH_EXERCISES',
+        payload: exercises.data
+
+        
+    })) 
+   }
 }
+

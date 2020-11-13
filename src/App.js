@@ -1,29 +1,20 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchExercises} from './actions/fetchExercises'
+import ExercisesContainer from './containers/ExercisesContainer'
 
 
 class App extends React.Component {
   
-  componentDidMount() {
-    this.props.fetchExercises({type: 'FETCH_EXERCISES', payload: {name: "Squat"}})
-    // fetch('http://localhost:3000/exercises')
-    // .then(res => res.json())
-    // .then(data => console.log(data))
-  }
+
 
   render() {
     return (
       <div className="App">
-        app
+        <ExercisesContainer/>
       </div>
   );
 }
 }
-// const mapStateToProps = (state) => {
-//   return {
-//     exercises: state.exercises
-//   }
-// }
 
-export default connect(null, {fetchExercises}) (App);
+
+export default App;

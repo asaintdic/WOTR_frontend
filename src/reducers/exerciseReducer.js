@@ -1,7 +1,12 @@
 export default function exerciseReducer(state = {exercises: []}, action) {
 
-    
-
-    return action.payload
+    switch (action.type) {
+      case 'FETCH_EXERCISES':
+          return {exercises: action.payload}
+      default:
+              return state
+              
+        
+    }
 }
 
