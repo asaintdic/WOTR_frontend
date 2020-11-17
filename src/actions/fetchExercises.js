@@ -7,6 +7,7 @@ export function fetchExercises() {
     .then(res => res.json())
     .then(exercises => dispatch({
         type: 'FETCH_EXERCISES',
+
         payload: exercises.data
 
         

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Exercise from './Exercise'
 
 const Exercises = (props) => {
 
@@ -7,7 +7,7 @@ const Exercises = (props) => {
         return (
             <div>
                {props.exercises.map(exercise => 
-               <li> {exercise.attributes.category} - {exercise.attributes.exercise_name}</li>
+               <div key={exercise.id}><Exercise exercise={exercise}/></div>
                )}
             </div>
         )
