@@ -1,15 +1,20 @@
 import React from 'react'
+import WorkoutsContainer from '../containers/WorkoutsContainer'
+import {Redirect} from 'react-router-dom'
 import Exercises from './Exercises'
 
 const Exercise = (props) => {
-   console.log(props)
+   
     let exercise = props.exercises[props.match.params.id - 1]
     
     return (
-        <li>
-         {exercise ? exercise.attributes.category : null} - {exercise ? exercise.attributes.exercise_name : null}
-        </li>
+        <div>
+        <h1>
+         {exercise ? exercise.category : null} - {exercise ? exercise.exercise_name : null}
+        </h1>
+        < WorkoutsContainer exercise={exercise}/>
+        </div>
     )
 }
 
-export default  Exercise
+export default Exercise

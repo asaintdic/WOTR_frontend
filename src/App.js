@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import ExercisesContainer from './containers/ExercisesContainer'
+import WorkoutsContainer from './containers/WorkoutsContainer'
 
 
 class App extends React.Component {
@@ -10,7 +10,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <ExercisesContainer/>
+        <WorkoutsContainer/>
       </div>
   );
 }
