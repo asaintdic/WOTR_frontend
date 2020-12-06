@@ -1,10 +1,10 @@
-export const deleteExercise = (exerciseId) => {
+export const deleteExercise = (exerciseId, workoutId) => {
     
     return (dispatch) => {
-        return fetch('http://localhost:3000/exercises', {
+        return fetch(`http://localhost:3000/workouts/${workoutId}/exercises/${exerciseId}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
-        .then(res => dispatch({type: 'DELETE_EXERCISE', payload: exerciseId}))
+        .then(workout => dispatch({type: 'DELETE_EXERCISE', payload: workout}))
     }
 }

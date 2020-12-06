@@ -9,7 +9,7 @@ const Workouts = (props) => {
 
         return (
             <div>
-               {props.workouts&& props.workouts.map(workout => 
+               {props.workouts && props.workouts.map(workout => 
                <div key={workout.id}>
                 <Link to={`/workouts/${workout.id}`}> {workout.title}</Link>
                 </div>)}

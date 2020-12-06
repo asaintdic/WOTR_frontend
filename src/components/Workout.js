@@ -5,7 +5,7 @@ import Exercises from './Exercises'
 
 const Workout = (props) => {
    
-    let workout = (props.workouts && props.workouts[props.match.params.id - 1]) || (props.workouts.included && props.workouts.included[props.match.params.id - 1])
+    let workout = (props.workouts && props.workouts[props.match.params.id - 1]) 
    
 
     return (

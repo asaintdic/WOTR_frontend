@@ -1,10 +1,12 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addWorkout} from '../actions/addWorkout'
+import {Redirect} from 'react-router-dom'
 
 class WorkoutInput extends React.Component {
 
     state = {
+        redirect: null,
         title: '', 
         note: '' 
         
@@ -21,12 +23,16 @@ class WorkoutInput extends React.Component {
         event.preventDefault()
         this.props.addWorkout(this.state)
         this.setState({
+            redirect: '/workouts',
             title: '', 
             note: '' 
             
         })
     }
     render() {
+        if (this.state.redirect) {
+            return <Redirect to={this.state.redirect} />
+          }
         return(
             <div>
             <form onSubmit={this.handleSubmit}>
@@ -37,6 +43,8 @@ class WorkoutInput extends React.Component {
             <input type='submit' />
             </form>
         </div>
+
+       
         )
     }
 }

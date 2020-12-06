@@ -21,19 +21,21 @@ class ExerciseInput extends React.Component {
 
         handleSubmit = (event) => {
             event.preventDefault()
-            // .addExercise(this.state, this.props.workout.id)
-            // this.setState({
-            //     category: '', 
-            //     exercise_name: '', 
-            //     equipment: '', 
-            //     reps: ''
-            // })
+            this.props.addExercise(this.state, this.props.workout.id)
+            this.setState({
+                category: '', 
+                exercise_name: '', 
+                equipment: '', 
+                reps: ''
+            })
         }
+
+    
     
         render() {
         return (
             <div> 
-            <form> 
+            <form onSubmit={this.handleSubmit}> 
                 <h4> Add New Exercise To Workout</h4>
                 <label> Category</label>
                     <select value={this.state.category} name="category" onChange={this.handleChange}>
