@@ -3,24 +3,10 @@ import {Route, Link} from 'react-router-dom'
 import {connect} from "react-redux"
 import {deleteExercise} from '../actions/deleteExercise'
 
-import Exercise from './Exercise'
+
 
 const Exercises = (props) => {
 
-// const workout_id = () = props.exercises.workout_exercises.map(workout_exercise =>
-//     workout_id = workout_exercise.workout_id
-// )
-    //     const workout_id =(props) => {
-//        let workout_id = props.exercises.workout_exercises.map(workout_exercise =>
-//          workout_id = workout_exercise.workout_id)
-//          return workout_id
-//    }
-
-    // const handleDelete = (exercise) => {
-    
-    // props.deleteExercise(exercise.id)
-
-    // }
         return (
             <div>
                 

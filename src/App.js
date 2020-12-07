@@ -1,16 +1,17 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import WorkoutsContainer from './containers/WorkoutsContainer';
-
+import { GlobalStyle } from "./components/FormComponents";
 
 class App extends React.Component {
   
-  // App is the mom, she is the parent component.we imported all of the neccessary files for the app, then we create a class method, then we render everythiing that we want to show on the screen and returning it. we're importing it and writing it out.
-
+  
 
   render() {
     return (
+      
       <div className="App">
+        <GlobalStyle/>
         <Navbar />
         <WorkoutsContainer/>
       </div>
@@ -20,4 +21,3 @@ class App extends React.Component {
 
 
 export default App;
-// we export it so we can import it into index

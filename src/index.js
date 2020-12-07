@@ -9,21 +9,20 @@ import workoutReducer from './reducers/workoutReducer'
 import App from './App';
 
 
-// set up our store
+
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-// we establish a compose enhancer to be able to create multiple stores
+
 
 
 let store = createStore(workoutReducer, composeEnhancers(applyMiddleware(thunk)));
-// create our store. Import it from redux, reducer, composeEnhancers, thunk middleware. Thunk(function returned by another function) middleware allows async calls throught the application
+
 
 ReactDOM.render(
 <Provider store={store}>
-  {/*Back end as front end Redux is a state container for JavaScript apps, often called a Redux store. It stores the whole state of the app in an immutable object tree. */}
-  {/* makes redux store available to any nested components that have been wrapped in the connect function || makes redux  store available */}
+
   <Router>
-    {/* routes..duuuuuh!...by fatima */}
+    
     <App />
   </Router>
 </Provider>, 

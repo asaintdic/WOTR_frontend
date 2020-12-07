@@ -3,7 +3,7 @@ export default function workoutReducer(state = {workouts: []}, action) {
       case 'FETCH_WORKOUTS':
          return {workouts: action.payload}
       case 'ADD_WORKOUT':
-         //  debugger
+        
          return {...state, workouts: [...state.workouts, action.payload]}
       case 'ADD_EXERCISE':
          let workouts = state.workouts.map(workout => {

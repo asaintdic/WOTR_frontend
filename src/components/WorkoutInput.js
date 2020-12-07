@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addWorkout} from '../actions/addWorkout'
 import {Redirect} from 'react-router-dom'
+import {Label, StyledForm, StyledFormWrapper, StyledInput} from './FormComponents'
 
 class WorkoutInput extends React.Component {
 
@@ -35,13 +36,17 @@ class WorkoutInput extends React.Component {
           }
         return(
             <div>
-            <form onSubmit={this.handleSubmit}>
-            <label> Title: </label>
-            <input type="text" placeholder="Title" value={this.state.title} name="title" onChange={this.handleChange}/><br/>
-            <label> Note: </label>
-            <input type="text" placeholder="Note" value={this.state.note} name="note" onChange={this.handleChange} /><br/>
-            <input type='submit' />
-            </form>
+            <StyledFormWrapper>
+                <StyledForm>
+                    <form onSubmit={this.handleSubmit}>
+                        <Label> Create New Workout: </Label>
+                            <StyledInput type="text" placeholder="Title" value={this.state.title} name="title" onChange={this.handleChange}/><br/>
+                        <Label> Note: </Label>
+                            <StyledInput type="text" placeholder="Note" value={this.state.note} name="note" onChange={this.handleChange} /><br/>
+                        <input type='submit' />
+                    </form>
+                </StyledForm>
+            </StyledFormWrapper>
         </div>
 
        
