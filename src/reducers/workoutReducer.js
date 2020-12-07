@@ -14,18 +14,15 @@ export default function workoutReducer(state = {workouts: []}, action) {
             }
          })
             return {...state, workouts: workouts }
-      // case 'DELETE_EXERCISE':
-      //     let currentWorkouts = state.workouts.map(workout => {
-      //       if (workout.id === action.payload.id) {
-      //          return action.payload
-      //       }else{
-      //          return workout
-      //       }
-      //    })
-      //       return {...state, workouts: currentWorkouts }
-         // I want to delte the item then return the state with that partibular item deleted
+      case 'DELETE_WORKOUT':
         
-      default:
+          let currentWorkouts = state.workouts.filter(workout => {
+             return workout.id !== action.payload.id
+                
+             })
+          return {...state, workouts: currentWorkouts}
+         
+       default:
          return state
               
         

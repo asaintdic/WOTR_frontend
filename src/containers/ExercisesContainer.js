@@ -22,7 +22,7 @@ class ExercisesContainer extends React.Component {
         return(
             <div>
              <ExerciseInput workout={this.props.workout}/>
-             <Exercises exercises={this.props.workout && this.props.workout.exercises}/>
+             <Exercises exercises={this.props.workout && this.props.workout}/>
                 {/*<Switch>relationships.exercises.data
                     <Route path='/exercises/new' component={ExerciseInput} />
                     <Route path='/exercises/:id' render={(routerProps) => <Exercise {...routerProps} exercises={this.props.exercises}/>}/>

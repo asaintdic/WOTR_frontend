@@ -4,7 +4,7 @@ import {addExercise} from '../actions/addExercise'
 
 
 class ExerciseInput extends React.Component {
-
+//    select initial state
     state = {
             category: 'Legs', 
             exercise_name: '', 
@@ -22,6 +22,8 @@ class ExerciseInput extends React.Component {
         handleSubmit = (event) => {
             event.preventDefault()
             this.props.addExercise(this.state, this.props.workout.id)
+            // props are passed to this component form the parent component (container) we call addExercise which is a function of the props
+            // 
             this.setState({
                 category: '', 
                 exercise_name: '', 
@@ -84,3 +86,4 @@ class ExerciseInput extends React.Component {
 }
 
 export default connect(null, {addExercise})(ExerciseInput)
+// call null if you dont want to subscribe to store updates
