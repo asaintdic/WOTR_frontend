@@ -5,7 +5,10 @@ export const deleteWorkout = (workoutId) => {
             method: 'DELETE'
         })
         .then(res => res.json())
-        .then(workout => dispatch({type: 'DELETE_WORKOUT', payload: workout}))
+        .then(workout => dispatch({
+            type: 'DELETE_WORKOUT', 
+            payload: workout
+        }))
         
     }
 }

@@ -5,6 +5,7 @@ import {deleteExercise} from '../actions/deleteExercise'
 
 
 
+
 const Exercises = (props) => {
 
         return (
@@ -14,6 +15,7 @@ const Exercises = (props) => {
                {props.exercises && props.exercises.exercises.map(exercise => 
                <div key={exercise.id}>
                 <li>{exercise.category} - {exercise.exercise_name} </li><br></br>
+                
              {/* <button onClick={()=> handleDelete(exercise)} >Delete</button> */}
              </div>)}
             </div>

@@ -15,7 +15,10 @@ export const addExercise = (exercise, workoutId) => {
                 body: JSON.stringify(exercise)
                 })
                 .then(res => res.json())
-                .then(workout => dispatch({type: 'ADD_EXERCISE', payload: workout})) 
+                .then(workout => dispatch({
+                        type: 'ADD_EXERCISE', 
+                        payload: workout
+                })) 
          
         
         }

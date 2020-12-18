@@ -22,7 +22,9 @@ class WorkoutInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+        console.log('a')
         this.props.addWorkout(this.state)
+        console.log('g')
         this.setState({
             redirect: '/workouts',
             title: '', 
@@ -30,28 +32,30 @@ class WorkoutInput extends React.Component {
             
         })
     }
-    render() {
-        if (this.state.redirect) {
-            return <Redirect to={this.state.redirect} />
-          }
+    render() 
+    {
+        // if (this.state.redirect) {
+        //     return <Redirect to={this.state.redirect} />
+        //   }
         return(
             <div>
-            <StyledFormWrapper>
-                <StyledForm>
-                    <form onSubmit={this.handleSubmit}>
+                <StyledFormWrapper>
+                    <StyledForm onSubmit={this.handleSubmit}>
+                    
                         <Label> Create New Workout: </Label>
                             <StyledInput type="text" placeholder="Title" value={this.state.title} name="title" onChange={this.handleChange}/><br/>
                         <Label> Note: </Label>
                             <StyledInput type="text" placeholder="Note" value={this.state.note} name="note" onChange={this.handleChange} /><br/>
-                        <input type='submit' />
-                    </form>
-                </StyledForm>
-            </StyledFormWrapper>
-        </div>
+                        <StyledInput type='submit' />
+                    
+                    </StyledForm>
+                </StyledFormWrapper>
+            </div>
 
        
         )
     }
 }
+
 
 export default connect(null, {addWorkout}) (WorkoutInput)

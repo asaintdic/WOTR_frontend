@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {Route, Switch} from 'react-router-dom'
 import {fetchWorkouts} from '../actions/fetchWorkouts'
+import {Route, Switch} from 'react-router-dom'
 import Workout from '../components/Workout'
 import Workouts from '../components/Workouts'
 import WorkoutInput from '../components/WorkoutInput'
@@ -13,8 +13,9 @@ class WorkoutsContainer extends React.Component {
     componentDidMount() {
       
         this.props.fetchWorkouts()
-  
+      
       }
+
     render() {
         return(
             <div>

@@ -21,14 +21,14 @@ export const sharedStyles = css`
   padding: 20 px
   box-sizing: border-box;
 `
-export const StyledFormWrapper = styled.form`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 0 20px;
-`
-export const StyledForm = styled.form `
+export const StyledFormWrapper = styled.section`
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   padding: 0 20px;
+ `
+export const StyledForm = styled.form`
   width: 100%;
   max-width: 700px;
   padding: 40px;

@@ -8,9 +8,7 @@ import {deleteWorkout} from '../actions/deleteWorkout'
 const Workouts = (props) => {
   
     const handleDelete = (workout) => {
-    
-    props.deleteWorkout(workout.id)
-
+        props.deleteWorkout(workout.id)
     }
 
         return (

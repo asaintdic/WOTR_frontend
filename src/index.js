@@ -16,15 +16,14 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
 let store = createStore(workoutReducer, composeEnhancers(applyMiddleware(thunk)));
-
+// console.log(store)
+// look for dispatch, getState(), routerprops
 
 ReactDOM.render(
 <Provider store={store}>
-
-  <Router>
-    
-    <App />
-  </Router>
+   <Router>
+      <App />
+   </Router>
 </Provider>, 
 
 document.getElementById('root'));
@@ -33,3 +32,10 @@ document.getElementById('root'));
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
+
+
+// local state and global state
+// local state- component state, global state = store
+
+// the global state manages its own state via the reducers
+// provider, gives access to the store
