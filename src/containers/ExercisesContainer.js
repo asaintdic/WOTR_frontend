@@ -17,7 +17,6 @@ class ExercisesContainer extends React.Component {
             <div>
              <ExerciseInput workout={this.props.workout}/>
              <Exercises exercises={this.props.workout && this.props.workout}/>
-             {/* <Route path='/exercises' render={(routerProps) => <Exercises {...routerProps} exercises={this.props.exercises}/>}/> */}
             </div>
 
         )

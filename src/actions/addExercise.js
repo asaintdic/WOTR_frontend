@@ -3,7 +3,7 @@ import Exercises from "../components/Exercises"
 
 
 export const addExercise = (exercise, workoutId) => {
-// purpose of thunk middleware is here, returning a function in a function
+
     
         return (dispatch) => {
             fetch(`http://localhost:3000/workouts/${workoutId}/exercises`, {

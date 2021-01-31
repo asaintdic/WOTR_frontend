@@ -9,15 +9,12 @@ const Workout = (props) => {
         
         return (
             <div>
-            <h1>
-            {workout ? workout.title : null} - {workout ? workout.note : null}
-            </h1>
-            < ExercisesContainer workout={workout}/>
+                <h1>
+                    {workout ? workout.title : null} - {workout ? workout.note : null}
+                </h1>
+                    < ExercisesContainer workout={workout}/>
             </div>
         )
     }
 
 export default Workout 
- //  let workout = props.workouts.filter(workout => workout.id == props.match.params.id )
- // workout = workout[0]
- // let workout = (props.workouts && props.workouts[props.match.params.id - 1]) 

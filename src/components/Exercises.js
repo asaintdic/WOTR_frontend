@@ -10,14 +10,11 @@ const Exercises = (props) => {
 
         return (
             <div>
-                
-                <h3>Exercises</h3>
-               {props.exercises && props.exercises.exercises.map(exercise => 
-               <div key={exercise.id}>
-                <li>{exercise.category} - {exercise.exercise_name} </li><br></br>
-                
-             {/* <button onClick={()=> handleDelete(exercise)} >Delete</button> */}
-             </div>)}
+             <h3>Exercises</h3>
+                {props.exercises && props.exercises.exercises.map(exercise => 
+                    <div key={exercise.id}>
+                        <li>{exercise.category} - {exercise.exercise_name} </li><br></br>
+                    </div>)}
             </div>
         )
     

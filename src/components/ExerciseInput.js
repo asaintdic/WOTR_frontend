@@ -5,7 +5,7 @@ import {StyledButton, Label, StyledForm, StyledFormWrapper, StyledInput} from '.
 
 
 class ExerciseInput extends React.Component {
-//    select initial state
+
     state = {
             category: 'Legs', 
             exercise_name: '', 

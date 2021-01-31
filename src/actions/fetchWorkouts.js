@@ -14,6 +14,3 @@ export function fetchWorkouts() {
     })) 
    }
 }
-// action creator needs action.type
-// thunk captures the return function
-// walk through code find key words

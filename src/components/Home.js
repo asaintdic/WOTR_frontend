@@ -6,8 +6,8 @@ const img = styled.div`
 `
 const Home = () => {
   return (
-      <div>
-      <img src={WorkoutImage} alt='WorkoutImage' className='center'/>
+     <div>
+        <img src={WorkoutImage} alt='WorkoutImage' className='center'/>
      </div>
   );
 }

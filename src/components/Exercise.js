@@ -10,10 +10,10 @@ const Exercise = (props) => {
    
     return (
         <div>
-        <h1>
-            {exercise ? exercise.category : null} - {exercise ? exercise.exercise_name : null}
+            <h1>
+                {exercise ? exercise.category : null} - {exercise ? exercise.exercise_name : null}
             </h1>
-        < WorkoutsContainer exercise={exercise}/>
+            < WorkoutsContainer exercise={exercise}/>
         </div>
     )
 }
