@@ -25,5 +25,3 @@ export default function workoutReducer(state = {workouts: []}, action) {
               
    }
 }
-// stores get state function will give value of the reducer
-// manipulating state based of of action type data (caseblocks)
