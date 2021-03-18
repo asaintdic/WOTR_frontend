@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar.js';
 import WorkoutsContainer from './containers/WorkoutsContainer';
 import { GlobalStyle } from "./components/FormComponents";
 
