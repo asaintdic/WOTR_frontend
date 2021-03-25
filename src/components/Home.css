@@ -1,0 +1,18 @@
+.hero-image {
+    background-image: url("https://www.verywellfit.com/thmb/yj-iRmnOzZo8ZEpQTvSrANHWF9c=/500x350/filters:no_upscale():max_bytes(150000):strip_icc()/muscular-african-american-woman-sweating-from-work-out-in-home-gym-930998708-5adbc820a18d9e00367c4f1f.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
