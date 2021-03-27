@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar.js';
 import WorkoutsContainer from './containers/WorkoutsContainer';
+import Home from './components/Home.js'
 import { GlobalStyle } from "./components/FormComponents";
 
 class App extends React.Component {
@@ -13,7 +14,8 @@ class App extends React.Component {
       <div className="App">
         {/* <GlobalStyle/> */}
         <Navbar />
-        <WorkoutsContainer/>
+        <Home />
+        {/* <WorkoutsContainer/> */}
       </div>
   );
 }
